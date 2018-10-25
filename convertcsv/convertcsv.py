@@ -18,6 +18,7 @@ import csv
 import sys
 from datetime import datetime, timedelta
 import time
+import json
 
 
 # In[68]:
@@ -40,8 +41,8 @@ print(timelist)
 
 
 # all files to be converted and merged
-filelist = ['ASH4CWHW2.txt']
-ofile=open('pythonoutput.txt',"w")
+filelist = ['ASH4CWHW2.csv']
+ofile=open('pythonoutput.csv',"w")
 writer1=csv.writer(ofile, delimiter=',',quotechar="\"",quoting=csv.QUOTE_ALL)
 outrow = list()
 result = list()
@@ -109,7 +110,4 @@ ofile.close()
 
 
 # In[14]:
-
-
-
 
