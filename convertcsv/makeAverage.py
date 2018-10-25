@@ -63,6 +63,7 @@ for row in reader1:
                             sumTotalPerMinute += row[colnum + 1]
                             countValuePerMinute += 1
                             averagePerMinute = sumTotalPerMinute / countValuePerMinute
+                            row[colnum + 1] = averagePerMinute
                         else:   
                             sumTotalPerMinute = 0
                             countValuePerMinute = 0
@@ -70,6 +71,7 @@ for row in reader1:
                             sumTotalPerMinute += row[colnum + 1]
                             countValuePerMinute += 1
                             averagePerMinute = sumTotalPerMinute / countValuePerMinute
+                            row[colnum + 1] = averagePerMinute
                         pass
 
                     dt3 = dt2.replace(second=0, microsecond=0)
@@ -77,7 +79,7 @@ for row in reader1:
                     outrowdt=dt2                    
             else:
 
-                val = averagePerMinute
+                val=row[colnum]
                 print(val)
                 outcolnum=round(colnum/2+.5)
                 print(outcolnum)

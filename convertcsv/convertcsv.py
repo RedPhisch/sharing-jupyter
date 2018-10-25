@@ -106,6 +106,7 @@ for csvfile in filelist:
     ifile.close()
     filecounter +=1
 #end loop through files
+
 ofile.close()
 
 
