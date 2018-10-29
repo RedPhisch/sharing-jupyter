@@ -56,18 +56,14 @@ for csvfile in filelist:
     
     #loop through contents of file
     for row in reader1:
-#        numcolumns = row.len()
-#        print(numcolumns)
         outrow.clear()
+
         if reader1RowNum==0:
             header=row
             colnum=0
             numrows=0
             for col in row:
                 print (header[colnum])
-                
-#                datasetnum = colnum/2 - colnum%2
-   #             result[datasetnum]
                 colnum+=1
         else:
             colnum=0
@@ -81,16 +77,13 @@ for csvfile in filelist:
                         dt2=datetime.strptime(row[colnum],"%b %d, %Y %H:%M:%S %p")
 
                         print("Hour1:", dt.hour)
-                        print("Hour2:", dt2.hour)    
-                        #dt=datetime.utcfromtimestamp(row[0])
-#                        print("dt",dt)
- #                       print("dt2",dt2)
+                        print("Hour2:", dt2.hour) 
                         dt3 = dt2.replace(second=0, microsecond=0)
                         print("dt3", dt3)
-                        outrowdt=dt
-                        
+                        outrowdt=dt2
+                                                
                 else:
-                    val=row[colnum]
+                    val = row[colnum]
                     print(val)
                     outcolnum=round(colnum/2+.5)
                     print(outcolnum)
@@ -106,9 +99,4 @@ for csvfile in filelist:
     ifile.close()
     filecounter +=1
 #end loop through files
-
 ofile.close()
-
-
-# In[14]:
-
